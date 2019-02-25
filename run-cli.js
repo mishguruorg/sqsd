@@ -28,7 +28,8 @@ sqsdProcess.on('restart', function () {
 });
 
 sqsdProcess.on('exit', function () {
-    console.info('SQSD stopped.');
+    console.info('SQSD stopped, terminating daemon');
+    process.exit(0)
 });
 
 sqsdProcess.start();
